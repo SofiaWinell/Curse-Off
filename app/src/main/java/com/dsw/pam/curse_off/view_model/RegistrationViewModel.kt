@@ -5,8 +5,13 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
-class RegistrationViewModel : ViewModel() {
+
+class RegistrationViewModel: ViewModel(), KoinComponent {
+    val injectedStringExample: String by inject()
+
 
     private val _username = MutableStateFlow("")
     private val _email = MutableStateFlow("")
@@ -46,3 +51,6 @@ class RegistrationViewModel : ViewModel() {
         }
     }
 }
+
+
+

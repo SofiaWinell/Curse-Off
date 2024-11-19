@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Curse_off"
 include(":app")
- 
+include(":settings")
+include(":settings2")
