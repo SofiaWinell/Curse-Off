@@ -18,12 +18,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dsw.pam.curse_off.view_model.RegistrationViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
+import org.koin.androidx.compose.koinViewModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RegistrationScreen(
-    viewModel: RegistrationViewModel = viewModel(),
+    viewModel: RegistrationViewModel = koinViewModel(),
     onRegistrationSuccess: () -> Unit
 ) {
     val username by viewModel.username.collectAsState()
