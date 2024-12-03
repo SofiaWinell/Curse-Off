@@ -12,7 +12,6 @@ class MyApplication: Application() {
         startKoin {
             androidContext(this@MyApplication)
             modules(appModule)
-            // Not necessary - makes koin log som info to console
             androidLogger()
         }
     }

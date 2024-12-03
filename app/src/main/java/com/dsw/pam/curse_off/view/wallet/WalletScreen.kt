@@ -8,9 +8,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.dsw.pam.curse_off.view_model.WalletViewModel
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun WalletScreen(onBackClick: () -> Unit) {
+fun WalletScreen(
+    viewModel: WalletViewModel = koinViewModel(),
+    onBackClick: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -19,7 +23,7 @@ fun WalletScreen(onBackClick: () -> Unit) {
         verticalArrangement = Arrangement.Top
     ) {
         Text(
-            text = "Portfel",
+            text = "Portfel ${viewModel.injectedDoubleExample}",
             fontSize = 24.sp,
             color = Color.Black
         )
