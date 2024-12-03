@@ -29,6 +29,12 @@ fun WalletScreen(
         )
         Spacer(modifier = Modifier.height(24.dp))
 
+        Button(onClick = {
+            viewModel.saveWalletAmount(newAmount = 100.0)
+        }) {
+            Text(text = "Zapisz nową wartość")
+        }
+
         Button(
             onClick = onBackClick,
             colors = ButtonDefaults.buttonColors(containerColor = Color.Gray)
@@ -37,3 +43,5 @@ fun WalletScreen(
         }
     }
 }
+
+
